@@ -1,0 +1,26 @@
+def guest_list1(n):
+    if len(guest_list)%2==0:
+        guest_list.insert(0,n)
+    else:
+        guest_list.append(n)
+
+guest_list=[]
+
+
+while len(guest_list)<12:
+    if len(guest_list)<3:
+        n=(input("Enter a name: "))
+        if n in guest_list:
+            print("Already invited")
+            print("already got invited: ",len(guest_list))
+        else:
+            guest_list.append(n)
+    else:
+        n = input("Enter a name: ")
+        if n in guest_list:
+            print("Already invited")
+            print("already got invited: ",len(guest_list))
+        else:
+            guest_list1(n)
+        
+print(guest_list)
